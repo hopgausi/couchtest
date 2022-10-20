@@ -7,7 +7,7 @@ The above command will uninstall old couchdb and install new upgraded version 3.
 
 Follow instructions on the screen prompt popup for setting up couchdb.
 
-Keep the default settings and on password, make sure the password matches the password that is in the following file(NOTE: keep default admin user):  
+Keep the default settings with exceptions on ip address binding(put 0.0.0.0) and on password, make sure the password matches the password that is in the following file(NOTE: keep default admin user):  
         /var/www/nlims_controller/config/couchdb.yml
 
 If the installation is successful, confirm by running the following command:
