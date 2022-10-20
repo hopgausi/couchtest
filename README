@@ -1,0 +1,24 @@
+This installation requires ubuntu 16.04 xenial assumes you are in the terminal and in a folder containing install.sh file and the two couchdb debian files.
+
+Install by running the following command: 
+        bash install.sh
+
+The above command will uninstall old couchdb and install new upgraded version 3.2.1 of couchdb.
+
+Follow instructions on the screen prompt popup for setting up couchdb.
+
+Keep the default settings and on password, make sure the password matches the password that is in the following file(NOTE: keep default admin user):  
+        /var/www/nlims_controller/config/couchdb.yml
+
+If the installation is successful, confirm by running the following command:
+        curl -X GET localhost:5984
+
+The above command will output something like this: 
+        {"couchdb":"Welcome","version":"3.2.0","git_sha":"efb409bba","uuid":"ef9b1b2c8c5258c6df10f6c642c2bee2","features":["access-ready","partitioned","pluggable-storage-engines","reshard","scheduler"],"vendor":{"name":"The Apache Software Foundation"}}
+
+Make sure on version its indicating 3.2.1
+
+Go to browser and input the following address which takes you to couchdb ui:
+        server_ipaddress:5984/_utils
+
+Try signing in using the credentials you have set where username is admin.
